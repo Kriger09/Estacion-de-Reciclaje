@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        @font-face {
+            font-family: 'letlea';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./Letters for Learners.ttf') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        @font-face {
+            font-family: 'letleaOut';
+            /* Nombre que quieras darle a la fuente */
+            src: url('./Letters for Learners Outline Bold.ttf') format('truetype');
+            /* Ruta a la fuente en tu servidor */
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background-color: green;
+            padding: 1%;
+            font-size: 30px;
+            font-family: letlea;
+            color: white;
+        }
+
+        .menu div {
+            padding-top: 2%;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f7f2f2;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link {
+            color: white;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        .bodyimg {
+            position: relative;
+        }
+
+        .bodyimg p {
+            text-align: center;
+            color: #f7f2f2;
+            font-size: 80px;
+            font-family: letleaOut;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .bodyimg h3 {
+            text-align: center;
+            color: #f7f2f2;
+            font-family: letlea;
+            font-size: 35px;
+            width: 50%;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .grid {
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20;
+            font-family: sans-serif;
+            padding-right: 8%;
+        }
+
+        .grid img {
+            border: 2px solid black;
+            border-radius: 20px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .origami {
+            border-radius: 20px;
+            background-color: #ffffff;
+            padding: 60px;
+            margin-left: 105px;
+            margin-bottom: 105px;
+            width: 310px;
+            text-align: center;
+        }
+
+        .origami2 {
+            border-radius: 20px;
+            background-color: #ffffff;
+            padding: 60px;
+            margin-left: 105px;
+            margin-bottom: 105px;
+            width: 310px;
+            text-align: left;
+        }
+
+        .origami2 h2 {
+            font-family: letlea;
+            font-size: 50px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .origami2 p {
+            font-family: letlea;
+            font-size: 40px;
+            line-height: 35px;
+        }
+
+        .origami h2 {
+            font-family: letlea;
+            font-size: 50px;
+            line-height: 40px;
+        }
+
+        .origami p {
+            font-family: letlea;
+            font-size: 40px;
+            line-height: 35px;
+        }
+
+        .origami:hover {
+
+            transform: scale(1.1);
+        }
+
+        .text h2 {
+            top: 62%;
+            left: 35%;
+            font-family: letleaOut;
+            font-size: 80px;
+            position: static;
+            text-align: center;
+            align-content: center;
+        }
+
+        .text p {
+            text-align: center;
+            align-content: center;
+            font-family: letlea;
+            font-size: 45px;
+            line-height: 35px;
+        }
+
+        .headText {
+            padding-right: 35%;
+        }
+
+        .textH3 {
+            font-family: letlea;
+            font-size: 50px;
+            text-align: center;
+            align-content: center;
+        }
+
+        .textH4 {
+            line-height: 35px;
+            font-size: 33px;
+        }
+
+        .text h3 {
+            font-family: letlea;
+            font-size: 40px;
+            position: static;
+            text-align: center;
+            align-content: center;
+        }
+
+        .bodyimg img {
+            height: 600px;
+            width: 100%;
+        }
+
+        .man {
+            padding-left: 32.5%;
+        }
+
+        .man img {
+            border: 2px solid black;
+            border-radius: 20px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 1170px) {
+            .menu {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                background-color: green;
+                padding: 1%;
+                font-size: 30px;
+                font-family: letlea;
+                color: white;
+            }
+
+            .menu div {
+                padding-top: 2%;
+            }
+
+            body {
+                margin: 0;
+                background-color: #f7f2f2;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            .bodyimg {
+                position: relative;
+            }
+
+            .bodyimg img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .bodyimg p {
+                text-align: center;
+                color: #f7f2f2;
+                font-size: 85px;
+                font-family: letlea;
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .bodyimg h3 {
+                text-align: center;
+                color: #f7f2f2;
+                font-family: letlea;
+                font-size: 15px;
+                line-height: 25px;
+                width: 80%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .grid {
+                display: flex;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                gap: 60px;
+                margin: 20px;
+                font-family: sans-serif;
+                padding-right: 10%;
+            }
+
+            .grid img {
+                border: 2px solid black;
+                border-radius: 25px;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .origami {
+                border-radius: 20px;
+                background-color: #ffffff;
+                padding: 75px;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .origami h2 {
+                font-family: letlea;
+                font-size: 50px;
+                line-height: 45px;
+            }
+
+            .origami p {
+                font-family: letlea;
+                font-size: 45px;
+                line-height: 40px;
+            }
+
+            .origami:hover {
+                transform: scale(1.1);
+            }
+
+            .text {
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            .text h2 {
+                font-family: letlea;
+                font-size: 50px;
+                margin-bottom: 10px;
+            }
+
+            .text p {
+                font-family: letlea;
+                font-size: 45px;
+                line-height: 40px;
+            }
+
+            .bodyimg img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .man {
+                padding-left: 8%;
+            }
+        }
+    </style>
+    <title>Estación De Reciclaje</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu">
+            <img class="headText" src="./Icon.png" width="5%" height="5%">
+            <div class="headText">
+                Estación De Reciclaje
+            </div>
+            <div>
+                <a href="https://www.facebook.com/colegioggm/?locale=es_LA">
+                    Acerca de nosotros
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bodyimg">
+        <img src="bg.png">
+        <p>
+            Estación De Reciclaje
+        </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>
+            Tecnología
+            <br>
+            <br>
+            Página Web Creada Por:
+            <br>
+            Diego André Muñoz, María Fernanda Sánchez, Rodrigo Iki Suré Espinoza, Erick Hernández, Sofia Pérez, Daniela
+            Monserrath Martínez y
+            Alejandro Rafael Sánchez.
+        </h3>
+    </div>
+    <div class="text">
+        <h2>¿Qué es el reciclaje?</h2>
+        <p>
+            El reciclaje es el proceso de convertir materiales desechados en nuevos productos. Ayuda a reducir residuos,
+            conservar recursos y ahorrar energía. Involucra la recolección, clasificación, procesamiento y creación de
+            productos nuevos a partir de materiales como papel, plástico, vidrio y metales. Aunque enfrenta desafíos
+            como la contaminación de materiales y los costos de infraestructura, es crucial para la sostenibilidad
+            ambiental.
+        </p>
+    </div>
+    <div class="text">
+        <h2>Nuestra Estación de Reciclaje</h2>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami">
+            <img src="./Img/img1.jpeg">
+            <br>
+            <br>
+            <h2>¿Qué Buscamos?</h2>
+            <p>
+                Como proyecto para apoyar al Colegio buscamos alternativas para fomentar el reciclaje de materiales muy
+                utilizados dentro de la institución.
+                Nuestra propuesta se ve mostrada en una estación con botes en la que podamos separar la basura para
+                posteriormente llevarla a un centro de reciclaje.
+            </p>
+        </div>
+        <div class="origami">
+            <img width=75% src="./Img/img2.jpeg">
+            <br>
+            <br>
+            <h2>¿Cómo Nos Puedes Ayudar?</h2>
+            <p>
+                Esperamos que los alumnos y docentes del Colegio puedan apoyarnos depositando sus desechos en los
+                espacios correspondientes. También, lo más necesario es que podamos ayudar a los demás a aprender a
+                separar toda la basura correctamente para que nuestro proyecto funcione de mejor manera.
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img3.jpeg">
+            <br>
+            <br>
+            <h2>¿Te gustaría hacer una manualidad con reciclado?</h2>
+            <p>
+                Para la idea que vamos a aportar tomamos en en cuenta materiales que se utilizan mucho en el Colegio y
+                se pueden conseguir fácilmente.
+            </p>
+        </div>
+    </div>
+    <div class="text">
+        <h2>¿Cómo se divide la estación?</h2>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami">
+            <img src="./Img/img4.avif">
+            <br>
+            <br>
+            <h2>Cartón</h2>
+            <p>
+                La forma de cartón más utilizada en el Colegio son con los envases de "Boing", sin embargo también en
+                cajas que ya no utilices, te invitamos a depositarlos en el espacio que tenga el título "Cartón".
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img5.avif">
+            <br>
+            <br>
+            <h2>Papel</h2>
+            <p>
+                El papel no es difícil de identificarlo en la escuela, todas nuestras libretas están hechas a partir de
+                él, y por ello es muy importante que cuando una hoja sea desprendida o ya no se deseé tenerla, se
+                deposite en el espacio con título "Papel" para poder reciclarla y convertirla en una hoja nueva.
+            </p>
+        </div>
+        <div class="origami">
+            <img width=75% src="./Img/img6.avif">
+            <br>
+            <br>
+            <h2>Plástico</h2>
+            <p>
+                Las envolturas las podemos encontrar como los empaques de cualquiera de los dulces que compramos en la
+                cafetería escolar, lo que hace que se genere mucho de este desecho. Y de igual manera, los tenedores,
+                cucharas o cuchillos desechables que utilices para comer, por favor deposítalos en el espacio con nombre
+                "Plástico".
+            </p>
+        </div>
+        <div class="origami">
+            <img src="./Img/img7.webp">
+            <br>
+            <br>
+            <h2>Unicel</h2>
+            <p>
+                El unicel es el material más utilizado para servir los alimentos que se venden en la cafetería, y es el
+                material más contaminante que debemos deshechar, este deposítalo en el espacio con nombre "Unicel".
+            </p>
+        </div>
+    </div>
+    <div class="text">
+        <h2>¿Te gustaría hacer una manualidad con reciclado?</h2>
+        <p>
+            Te damos un par de ideas con materiales y pasos para que te motives a reciclar de manera creativa.
+        </p>
+    </div>
+    <div class="text">
+        <h2>1. Porta Lápices con Latas o Botellas de Plástico</h2>
+        <div class="man"><img width=50% src="./Img/img8.avif"></div>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami2">
+            <h2>Materiales Necesarios:</h2>
+            <p>
+                • Latas de aluminio vacías o botellas de plástico
+                <br>
+                • Papel de revistas o papel decorativo
+                <br>
+                • Tijeras
+                <br>
+                • Pegamento
+                <br>
+                • Pinturas o rotuladores
+            </p>
+        </div>
+        <div class="origami2">
+            <h2>Instrucciones:</h2>
+            <p>
+                1. Limpia bien las latas o botellas.
+                <br>
+                <br>
+                2. Corta las botellas de plástico a la altura deseada (si usas botellas).
+                <br>
+                <br>
+                3. Forra el exterior con papel decorativo o pinta las latas/botellas.
+                <br>
+                <br>
+                4. Decora con rotuladores, pegatinas o cualquier otro material disponible.
+            </p>
+        </div>
+    </div>
+    <div class="text">
+        <h2>2. Florero de Papel</h2>
+        <div class="man"><img width=50% src="./Img/img9.jpeg"></div>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami2">
+            <h2>Materiales Necesarios:</h2>
+            <p>
+                • Papel de revistas o papel usado
+                <br>
+                • Tijeras
+                <br>
+                • Pegamento
+                <br>
+                • Tubo de cartón (de papel higiénico)
+                <br>
+                • Pinturas o rotuladores
+            </p>
+        </div>
+        <div class="origami2">
+            <h2>Instrucciones:</h2>
+            <p>
+                1. Recorta tiras de papel de revistas.
+                <br>
+                <br>
+                2. Enrolla las tiras de papel para hacer flores y pégalos.
+                <br>
+                <br>
+                3. Decora el tubo de cartón y úsalo como base del florero.
+                <br>
+                <br>
+                4. Coloca las flores de papel en el tubo.
+            </p>
+        </div>
+    </div>
+    <div class="text">
+        <h2>3. Pulseras de Papel</h2>
+        <div class="man"><img width=50% src="./Img/img10.jpeg"></div>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami2">
+            <h2>Materiales Necesarios:</h2>
+            <p>
+                • Papel de revistas o papel de desecho
+                <br>
+                • Tijeras
+                <br>
+                • Pegamento
+                <br>
+                • Cinta adhesiva (opcional)
+            </p>
+        </div>
+        <div class="origami2">
+            <h2>Instrucciones:</h2>
+            <p>
+                1. Recorta tiras largas de papel.
+                <br>
+                <br>
+                2. Enrolla las tiras para formar cuentas de papel.
+                <br>
+                <br>
+                3. Ensarta las cuentas en un hilo o una tira de papel para hacer pulseras.
+                <br>
+                <br>
+                4. Lamina con cinta adhesiva si deseas que sean más duraderas.
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="text">
+        <h2>4. Instrumentos Musicales Reciclados</h2>
+        <div class="man"><img width=50% src="./Img/img11.jpeg"></div>
+    </div>
+    <br>
+    <div class="grid">
+        <div class="origami2">
+            <h2>Materiales Necesarios:</h2>
+            <p>
+                • Rollos de papel higiénico o toallas de papel
+                <br>
+                • Botellas de plástico
+                <br>
+                • Latas de aluminio
+                <br>
+                • Arroz o lentejas (para el relleno)
+                <br>
+                • Pegamento
+                <br>
+                • Pinturas y rotuladores
+            </p>
+        </div>
+        <div class="origami2">
+            <h2>Instrucciones:</h2>
+            <p>
+                1. Para hacer maracas, llena botellas de plástico con arroz o lentejas y ciérralas bien.
+                <br>
+                <br>
+                2. Para hacer tambores, usa latas de aluminio y cubre la parte superior con papel o tela tensa.
+                <br>
+                <br>
+                3. Decora los instrumentos con pinturas o rotuladores.
+            </p>
+
+        </div>
+    </div>
+    <div class="text">
+        <h2>¡Ayuda a salvar al planeta!</h2>
+        <p>
+            “Reciclar es darle una segunda vida a las cosas y una nueva oportunidad al planeta.”
+            <br>
+            <br>
+            -Anónimo
+        </p>
+        <div class="man"><img width=50% src="./Img/img12.jpeg"></div>
+        <br>
+        <br>
+    </div>
+
+</body>
+<div class="header">
+    <div class="menu">
+        <img class="headText" src="./Icon.png" width="5%" height="5%">
+        <div class="headText">
+            Estación de Reciclaje
+        </div>
+    </div>
+</div>
+
+</html>
